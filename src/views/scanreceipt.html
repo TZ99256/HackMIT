@@ -31,13 +31,16 @@
         </nav>
 
         <div id = "scan-container" class = "text-center">
-            <div>Scan Receipt</div>
-            <div> OR </div>
-            <div> Manually Enter</div>
-            <div class='formstyle'>
-            <form id="contactForm">
-                <div class = 'formstyle'>
-                    <div class="form-group">
+            <div id = "scan-options">
+                <div>Scan Receipt</div>
+                <div> OR </div>
+                <div> Manually Enter</div>
+            </div>
+            
+            <div class='form-container' class = "text-center">
+                <form id="contactForm">
+                    <div class = 'formstyle'>
+                        <div class="form-group">
                             <label for="exampleFullName">Item Purchased</label>
                             <input type="text" class="form-control fullname" id="exampleFullName" placeholder="Enter Full Name" required>
                         </div>
@@ -53,10 +56,11 @@
                             <label for="exampleMessage">Notes</label>
                             <textarea class="form-control message" id="exampleMessage" placeholder="Notes" cols="30" rows="10" required></textarea>
                         </div>
+                        
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                </div>
-        </form>
+                </form>
+            </div>
         </div>
 
         
