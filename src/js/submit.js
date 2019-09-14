@@ -10,16 +10,16 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-var messagesRef = firebase.database().ref();
+var messagesRef = firebase.database().ref().child("Items");
 
 $('#contactForm').submit(function(e) {
     e.preventDefault();
  
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
-        name: $('.fullname').val(),
-        email: $('.email').val(),
-        subject: $('.subject').val(),
+        item: $('.item').val(),
+        price: $('.price').val(),
+        date: $('.date').val(),
         message: $('.message').val()
     });
  
