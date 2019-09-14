@@ -31,9 +31,9 @@
 }
 
 #food{
-    height: 100px;
+    height: 80px;
     width: 100px;
-    background-image: url(../../src/images/food.jpeg);
+    background-image: url(../../src/images/food.png);
     background-size: contain;
     position: fixed;
     top: 100px;
