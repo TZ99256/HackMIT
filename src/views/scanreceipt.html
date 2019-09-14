@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../../public/css/formcss.css">
 
     </head>
-    <body>
+    <body id='intro-container'>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,18 +31,16 @@
         </nav>
 
         <div id = "scan-container" class = "text-center">
-            <div id = "scan-options">
-                <div>Scan Receipt</div>
-                <div> OR </div>
-                <div> Manually Enter</div>
-            </div>
-            
-            <div class='form-container' class = "text-center">
-                <form id="contactForm">
-                    <div class = 'formstyle'>
+            <div><h1>Scan Receipt</h1></div>
+            <div> OR </div>
+            <form id="contactForm" style="display:inline-block;border:solid;padding:10px;">
+                <div>
+                    <h1>Enter Receipt</h1>
+                </div>
+                <div>
                         <div class="form-group">
-                            <label for="exampleFullName">Item Purchased</label>
-                            <input type="text" class="form-control fullname" id="exampleFullName" placeholder="Enter Full Name" required>
+                            <label style='font-size:20px'> Item Purchased</label>
+                            <input type="text" class="form-control item" id="exampleFullName" placeholder="Enter Full Name" required>
                         </div>
                         <select class="custom-select">
                             <option selected>Open this select menu</option>
@@ -53,22 +51,22 @@
                             <option value="other">Other</option>
                         </select>
                         <div class="form-group">
-                            <label> Price</label>
-                            <input type="text" class="form-control price" id="exampleEmail" placeholder="Enter Price" required>
+                            <label style='font-size:20px'> Price</label>
+                            <input type="text" class="form-control email" id="exampleEmail" placeholder="Enter Price" required>
                         </div>
                         <div class="form-group">
-                            <label> Date Purchased</label>
-                            <input type="text" class="form-control date" id="exampleSubject" placeholder="Enter Data Purchased" required>
+                            <label style='font-size:20px'> Date Purchased</label>
+                            <input type="text" class="form-control subject" id="exampleSubject" placeholder="Enter Data Purchased" required>
                         </div>
                         <div class="form-group">
-                            <label> Notes</label>
+                            <label style='font-size:20px'> Notes</label>
                             <textarea class="form-control message" id="exampleMessage" placeholder="Notes" cols="30" rows="10" required></textarea>
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                </form>
-            </div>
+                
+        </form>
         </div>
 
         

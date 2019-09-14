@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+.formstyle{
+    width:75%;
+  
+}
+
+body{
+    text-align:center;
+=======
 .form-container{
     position: relative;
     left:25%;
@@ -11,4 +20,5 @@
 
 #scan-options{
     font-size: 30px;
+>>>>>>> 64505ed990b8af8f3db45e956e3695068b24331f
 }
