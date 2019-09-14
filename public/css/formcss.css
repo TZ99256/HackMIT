@@ -1,14 +1,8 @@
-.form-container{
-    position: relative;
-    left:25%;
-    width: 50%;
-    font-size: 20px;
+.formstyle{
+    width:75%;
+  
 }
 
-#scan-container{
-    height: 100vh;
-}
-
-#scan-options{
-    font-size: 30px;
+body{
+    text-align:center;
 }
