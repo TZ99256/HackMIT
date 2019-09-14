@@ -10,12 +10,13 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-var messagesRef = firebase.database().ref().child("Items");
+var database = firebase.database();
+var add_items = database.ref().child("Items");
 
 $('#contactForm').submit(function(e) {
     e.preventDefault();
  
-    var newMessageRef = messagesRef.push();
+    var newMessageRef = add_items.push();
     newMessageRef.set({
         item: $('.item').val(),
         price: $('.price').val(),
@@ -27,3 +28,14 @@ $('#contactForm').submit(function(e) {
  
     $('#contactForm')[0].reset();
 });
+
+var retrieve = database.ref('Items');
+retrieve.on('value',gotData,errData);
+
+function gotData(data){
+    console.log(data.val()) //this is where the data is
+}
+function errData(err) {
+    console.log('Error!');
+    console.log(err)
+}
