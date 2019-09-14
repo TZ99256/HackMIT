@@ -18,8 +18,8 @@ $('#contactForm').submit(function(e) {
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
         item: $('.item').val(),
-        email: $('.email').val(),
-        subject: $('.subject').val(),
+        price: $('.price').val(),
+        date: $('.date').val(),
         message: $('.message').val()
     });
  
