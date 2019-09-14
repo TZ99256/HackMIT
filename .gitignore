@@ -114,3 +114,4 @@ venv.bak/
 .idea/modules.xml
 .idea/gerrymandering_game.iml
 .idea/inspectionProfiles/profiles_settings.xml
+.idea/workspace.xml
