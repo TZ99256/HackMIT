@@ -30,6 +30,8 @@ snapshot.val()
 var x = null
 var result = retrieve.on('value',gotData,errData);
 
+
+const data_object = {};
 function gotData(data){
     console.log(data.val()); //this is where the data is
     x = data.val()
