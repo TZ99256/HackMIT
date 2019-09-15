@@ -26,7 +26,6 @@
     font-family: 'Dosis'; 
 }
 
-
 .emoji{
     height: 50px;
     width: 50px;
@@ -37,83 +36,10 @@
     width: 20px;
 }
 
-
 .ten-container{
     height: 220px;
     width: 250px;
     background-color: rgb(0, 179, 179);
     padding-left: 40px;
     font-size: 20px;
-}
-
-
-
-#food2{
-    height: 20px;
-    width: 20px;
-    background-image: url(../../src/images/food.png);
-    background-size: cover;
-    position: relative;
-    top: 350px;
-    left: 300px;
-}
-
-#clothing2{
-    height: 20px;
-    width: 20px;
-    background-image: url(../../src/images/clothes.png);
-    background-size: contain;
-    position: relative;
-    top: 200px;
-    left: 400px;
-}
-
-#furniture2{
-    height: 20px;
-    width: 20px;
-    background-image: url(../../src/images/clothes.png);
-    background-size: contain;
-    position: relative;
-    top: 200px;
-    left: 600px;
-}
-
-#transportation2{
-    height: 20px;
-    width: 20px;
-    background-image: url(../../src/images/transportation.png);
-    background-size: contain;
-    position: relative;
-    top: 350px;
-    left: 700px;
-}
-
-#health2{
-    height: 20px;
-    width: 20px;
-    background-image: url(../../src/images/home.png);
-    background-size: contain;
-    position: relative;
-    top: 500px;
-    left: 300px;
-}
-
-#leisure2{
-    height: 20px;
-    width: 20px;
-    background-image: url(../../src/images/misc.jpeg);
-    background-size: contain;
-    position: relative;
-    top: 500px;
-    left: 400px;
-}
-
-#other2{
-    height: 20px;
-    width: 20px;
-    background-image: url(../../src/images/misc.jpeg);
-    background-size: contain;
-    position: relative;
-    top: 500px;
-    left: 500px;
 }
