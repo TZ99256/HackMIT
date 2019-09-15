@@ -7,7 +7,8 @@
 }
 #name{
     font-size: 120px;
-    font-family: "Alegreya SC";
+    /* font-family: "Alegreya SC";*/
+    font-family: "Helvetica Neue";
     padding: 150px 0px 0px 0px;
 }
 
@@ -19,12 +20,17 @@
     padding: 40px 0px 0px 0px;
 }
 
+body {
+    background-color: rgb(204, 255, 255);
+}
+
 
 /**************************************** myspending css bc im lazy ************************************/
 .pics-container{
     height: 100vh;
     background-color: rgb(204, 255, 255);    
-    font-family: 'Dosis'; 
+    /* font-family: 'Dosis'; */
+    font-family: "Helvetica Neue";
 }
 
 .emoji{
@@ -55,4 +61,6 @@
     padding-top: 100px;
 }
 
-
+.text-center {
+    font-family: "Helvetica Neue";
+}

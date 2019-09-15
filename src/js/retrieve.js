@@ -155,7 +155,7 @@ firebase.database().ref('Items').once('value').then(function(snapshot) {
             }
         }*/
 
-        cal.push([things[0].date, things[0].category]);
+        cal.push([things[0].date, things[0].category, things[0].item,things[0].price,things[0].message]);
 
         props[things[0]["category"]] += parseFloat(things[0]['price']);
         total += parseFloat(things[0]['price']);
@@ -175,15 +175,14 @@ firebase.database().ref('Items').once('value').then(function(snapshot) {
 
     $(function ()
     {
-        $('#update').on('click', function ()
-        {
-            for(var key in props){
-                for (i=0; i<props[key]; i++){
-                    var key2 = ('#').concat(key);
-                    $(key2).prepend(pics[key]);
-                }
+
+        for(var key in props){
+            for (i=0; i<props[key]; i++){
+                var key2 = ('#').concat(key);
+                $(key2).prepend(pics[key]);
             }
-        });
+        }
+    
 
     });
     
@@ -193,10 +192,21 @@ firebase.database().ref('Items').once('value').then(function(snapshot) {
     if (preOb!=null){
         for (i=0;i<cal.length; i++){
             var box = document.createElement('div');
-            box.innerText = cal[i][0]
+            box.innerText = 'date: '+cal[i][0]
             preOb.appendChild(box)
             var box = document.createElement('div');
-            box.textContent = cal[i][1]
+            box.textContent = 'category: '+cal[i][1]
+            preOb.appendChild(box)
+            var box = document.createElement('div');
+            box.textContent = 'item: '+cal[i][2]
+            preOb.appendChild(box)
+            var box = document.createElement('div');
+            box.textContent = 'price: $'+cal[i][3]
+            preOb.appendChild(box)
+            var box = document.createElement('div');
+            box.textContent = 'message: '+cal[i][4]
+            preOb.appendChild(box)
+            var box = document.createElement('hr');
             preOb.appendChild(box)
         }
     }
