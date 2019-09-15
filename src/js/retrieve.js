@@ -20,7 +20,7 @@ var result = retrieve.on('value',gotData,errData);
 //     preOb.innerText =JSON.stringify(snap.val(),null,3)
 // });
 
-var preOb = document.getElementById('object');
+
 firebase.database().ref('Items').once('value').then(function(snapshot) {
     snapshot.forEach(function(userSnapshot) {
         var things = []
@@ -33,13 +33,16 @@ firebase.database().ref('Items').once('value').then(function(snapshot) {
             message: username.message,
             
         });
-        for (var key in things){
-            var box = document.createElement('div');
-            box.innerText = things[key].category
-            preOb.appendChild(box)
-            var box = document.createElement('div');
-            box.textContent = things[key].date
-            preOb.appendChild(box)
+        var preOb = document.getElementById('object');
+        if (preOb!=null){
+            for (var key in things){
+                var box = document.createElement('div');
+                box.innerText = things[key].category
+                preOb.appendChild(box)
+                var box = document.createElement('div');
+                box.textContent = things[key].date
+                preOb.appendChild(box)
+            }
         }
     });
 });
