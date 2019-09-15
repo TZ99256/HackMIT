@@ -34,6 +34,7 @@ $(function ()
 
 });
 
+
 function emojify(item, category) {
     const emoji = require('node-emoji');
     const category_emojis = {
