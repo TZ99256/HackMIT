@@ -20,21 +20,31 @@ var result = retrieve.on('value',gotData,errData);
 //     preOb.innerText =JSON.stringify(snap.val(),null,3)
 // });
 
-var things = []
+var preOb = document.getElementById('object');
 firebase.database().ref('Items').once('value').then(function(snapshot) {
     snapshot.forEach(function(userSnapshot) {
+        var things = []
         var username = userSnapshot.val();
         things.push({
             date:username.date,
             category: username.category,
-            key:   username.item,
-            value: username.price,
+            item:   username.item,
+            price: username.price,
             message: username.message,
         });
+        for (var key in things){
+            var box = document.createElement('div');
+            box.innerText = things[key].category
+            preOb.appendChild(box)
+            var box = document.createElement('div');
+            box.textContent = things[key].date
+            preOb.appendChild(box)
+        }
     });
 });
 
 
+<<<<<<< HEAD
   
 var preOb = document.getElementById('object');
 for (var key in things){
@@ -42,6 +52,10 @@ for (var key in things){
     box.innerText = things[key]
     preOb.appendChild(box)
 }
+=======
+
+
+>>>>>>> f1411435fc759928bdd91099921dbf5ce819758c
 
 function gotData(data){
     console.log(data.val()); //this is where the data is
