@@ -1,0 +1,23 @@
+{
+  "name": "hackmit",
+  "version": "1.0.0",
+  "description": "Scan receipts and visualize stuff you’re buying",
+  "main": "index.js",
+  "dependencies": {
+    "node-emoji": "^1.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TZ99256/HackMIT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TZ99256/HackMIT/issues"
+  },
+  "homepage": "https://github.com/TZ99256/HackMIT#readme"
+}
