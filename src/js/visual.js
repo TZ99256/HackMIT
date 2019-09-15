@@ -13,8 +13,8 @@ for(var key in data){
 for(var key in props){
     props[key] = Math.round(props[key]/total * 100);
 }
-var pics = {'#food': '<img class = "emoji" src= "../images/food.png"/>',
-            '#clothing': '<img class = "emoji" src = "../images/clothes.png"/>',
+var pics = {'#food': '<img class = "emoji" src= "../images/food2.png"/>',
+            '#clothing': '<img class = "emoji" src = "../images/clothes2.png"/>',
             '#furniture': '<img class = "emoji" src = "../images/home.png"/>',
             '#transportation': '<img class = "emoji" src = "../images/transportation.png"/>',
             '#health': '<img class = "emoji" src = "../images/health.png"/>',
