@@ -20,7 +20,7 @@
 
 
 /**************************************** myspending css bc im lazy ************************************/
-#pics-container{
+.pics-container{
     height: 100vh;
     background-color: rgb(255, 255, 204);
 }
@@ -91,6 +91,10 @@
 
 
 .emoji{
-    height: 20px;
-    width: 20px;
+    height: 50px;
+    width: 50px;
+}
+
+.rowht{
+    height: 40px;
 }

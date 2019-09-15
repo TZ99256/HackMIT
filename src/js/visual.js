@@ -2,7 +2,7 @@ var data = {1: {'ID': '#food', 'Purchase Category': 'Dining', 'Price': 12.05},
             2: {'ID': '#food', 'Purchase Category': 'Dining', 'Price': 3.12},
             3: {'ID': '#transportation', 'Purchase Category': 'Transportation', 'Price': 4.1}};
 
-var props = {'#food': 0, '#utilities': 0, '#clothing': 0, '#transportation': 0, '#home': 0, '#misc': 0};
+var props = {'#food': 0, '#clothing': 0, '#furniture': 0, '#transportation': 0, '#health': 0, '#other': 0};
 var total = 0;
 for(var key in data){
     var attrs = data[key];
@@ -13,10 +13,11 @@ for(var key in props){
     props[key] = Math.round(props[key]/total * 100);
 }
 var pics = {'#food': '<img class = "emoji" src= "../images/food.png"/>',
-            '#utilities': '<img class = "emoji" src = "../images/utilities.jpg"/>',
             '#clothing': '<img class = "emoji" src = "../images/clothes.png"/>',
+            '#furniture': '<img class = "emoji" src = "../images/home.png"/>',
             '#transportation': '<img class = "emoji" src = "../images/transportation.png"/>',
-            '#home': '<img class = "emoji" src = "../images/home.png"/>',
+            '#health': '<img class = "emoji" src = "../images/health.png"/>',
+            '#leisure': '<img class = "emoji" src = "../images/leisure.png"/>',
             '#misc': '<img class = "emoji" src = "../images/misc.jpeg"/>'}
 
 $(function ()
