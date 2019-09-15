@@ -12,15 +12,13 @@ if (!firebase.apps.length) {
 }
 var database = firebase.database();
 var retrieve = database.ref('Items');
-/*
-starCountRef.on('value', function(snapshot) {
-    updateStarCount(postElement, snapshot.val());
-  });
-snapshot.val()
 
-*/
 var result = retrieve.on('value',gotData,errData);
+var preOb = document.getElementById('object');
 
+database.ref().child("Items").on('value',snap =>{
+    preOb.innerText =JSON.stringify(snap.val(),null,3)
+});
 function gotData(data){
     console.log(data.val()); //this is where the data is
     var x = data.val()
