@@ -29,7 +29,7 @@
     height: 80px;
     width: 100px;
     background-image: url(../../src/images/food.png);
-    background-size: contain;
+    background-size: cover;
     position: fixed;
     top: 350px;
     left: 300px;
