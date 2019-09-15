@@ -18,7 +18,7 @@ $(function ()
     {
         for(var key in props.keys()){
             for (i=0; i<props[key]; i++){
-                $(key)
+                $(key).prepend('<img src= "../../images/food.png" />')
             }
         }
     });

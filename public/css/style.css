@@ -24,7 +24,7 @@
     height: 100vh;
     background-color: rgb(255, 255, 204);
 }
-
+/*
 #food{
     height: 20px;
     width: 20px;
@@ -87,4 +87,9 @@
 
 #update{
     height: 20px;
+}*/
+
+#food{
+    height: 20px;
+    width: 20px;
 }
