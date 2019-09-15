@@ -1,7 +1,8 @@
 <html>
 <head>
-    <title>OCR Sample</title>
+    <title>Upload Receipts</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
 
@@ -81,27 +82,31 @@
     };
 </script>
 
-<h1>Upload Receipt</h1>
-Enter the URL to an image of receipt, then
-click the <strong>Read image</strong> button.
-<br><br>
-Image to read:
-<input type="text" name="inputImage" id="inputImage" 
-     />
-<button onclick="processImage()">Read image</button>
-<br><br>
-<div id="wrapper" style="width:1020px; display:table;">
-    <div id="jsonOutput" style="width:600px; display:table-cell;">
-        Are these your words?
+<div id = "ocr-container">
+        <h1>Optical Character Recognition (OCR):</h1>
+        Enter the URL to an image of receipt, then
+        click the <strong>Read image</strong> button.
         <br><br>
-        <textarea id="responseTextArea" class="UIInput"
-                  style="width:580px; height:400px;"></textarea>
-    </div>
-    <div id="imageDiv" style="width:420px; display:table-cell;">
-        Source image:
+        Image to read:
+        <input type="text" name="inputImage" id="inputImage" 
+             />
+        <button onclick="processImage()">Read image</button>
         <br><br>
-        <img id="sourceImage" width="400" />
-    </div>
+        <div id="wrapper" style="width:1020px; display:table;">
+            <div id="jsonOutput" style="width:600px; display:table-cell;">
+                Are these your items?:
+                <br><br>
+                <textarea id="responseTextArea" class="UIInput"
+                          style="width:580px; height:400px;"></textarea>
+            </div>
+            <div id="imageDiv" style="width:420px; display:table-cell;">
+                Source image:
+                <br><br>
+                <img id="sourceImage" width="400" />
+            </div>
+        </div>
+
 </div>
+
 </body>
 </html>

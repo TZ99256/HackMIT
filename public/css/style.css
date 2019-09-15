@@ -64,3 +64,8 @@ body {
 .text-center {
     font-family: "Helvetica Neue";
 }
+
+#ocr-container{
+    background-color: rgb(204, 255, 255);
+    height: 100vh;
+}

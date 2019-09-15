@@ -4,6 +4,7 @@
   "description": "Scan receipts and visualize stuff you’re buying",
   "main": "index.js",
   "dependencies": {
+    "amadeus": "^3.1.0",
     "node-emoji": "^1.10.0"
   },
   "devDependencies": {},
