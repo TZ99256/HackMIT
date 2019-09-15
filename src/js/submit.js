@@ -11,6 +11,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
+
 var add_items = database.ref().child("Items");
 
 $('#contactForm').submit(function(e) {
@@ -33,10 +34,15 @@ $('#contactForm').submit(function(e) {
 var retrieve = database.ref('Items');
 retrieve.on('value',gotData,errData);
 
+
+const data_object = {};
 function gotData(data){
     console.log(data.val()) //this is where the data is
+    data_object = data.val();
 }
 function errData(err) {
     console.log('Error!');
     console.log(err)
 }
+
+export default data_object;
