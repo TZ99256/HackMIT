@@ -13,6 +13,7 @@ if (!firebase.apps.length) {
 var database = firebase.database();
 var add_items = database.ref().child("Items");
 
+
 $('#contactForm').submit(function(e) {
     e.preventDefault();
  
@@ -29,6 +30,26 @@ $('#contactForm').submit(function(e) {
  
     $('#contactForm')[0].reset();
 });
+
+
+// var database = firebase.database();
+// var retrieve = database.ref('Items');
+
+// var preOb = document.getElementById('object');
+
+// var result = retrieve.on('value',updateData,errData);
+
+// function updateData(data){
+//     console.log(data.val()); //this is where the data is
+//     // preOb.innerText = JSON.stringify(data.val(),null,3)
+// }
+// function errData(err) {
+//     console.log('Error!');
+//     console.log(err)
+// }
+
+
+
 
 
 
