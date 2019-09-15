@@ -20,10 +20,8 @@ var result = retrieve.on('value',gotData,errData);
 //     preOb.innerText =JSON.stringify(snap.val(),null,3)
 // });
 
-
+var preOb = document.getElementById('object');
 firebase.database().ref('Items').once('value').then(function(snapshot) {
-    var props = {'food': 0.0, 'clothing': 0.0, 'furniture': 0.0, 'transportation': 0.0, 'health': 0.0, 'leisure': 0.0, 'other': 0.0};
-    var total = 0.0;
     snapshot.forEach(function(userSnapshot) {
         var things = []
         var username = userSnapshot.val();
@@ -33,51 +31,34 @@ firebase.database().ref('Items').once('value').then(function(snapshot) {
             item:   username.item,
             price: username.price,
             message: username.message,
+            
         });
-        var preOb = document.getElementById('object');
-        if (preOb!=null){
-            for (var key in things){
-                var box = document.createElement('div');
-                box.innerText = things[key].category
-                preOb.appendChild(box)
-                var box = document.createElement('div');
-                box.textContent = things[key].date
-                preOb.appendChild(box)
-            }
-        }
-
-        props[things[0]["category"]] += parseFloat(things[0]['price']);
-        total += parseFloat(things[0]['price']);
+        for (var key in things){
+            var box = document.createElement('div');
+            box.innerText = 'category: '+things[key].category
+            preOb.appendChild(box)
+            var box = document.createElement('div');
+            box.textContent = 'date: '+things[key].date
+            preOb.appendChild(box)
+            var box = document.createElement('div');
+            box.textContent ='item: '+things[key].item
+            preOb.appendChild(box)
+            var box = document.createElement('div');
+            box.textContent ='price: $'+things[key].price
+            preOb.appendChild(box)
+            var box = document.createElement('div');
+            box.textContent ='message: '+things[key].message
+            preOb.appendChild(box)
+            var box = document.createElement('hr');
+            preOb.appendChild(box)
         
+
+        }
     });
-    for(var key in props){
-        props[key] = Math.round(props[key]/total * 100);
-    }
-    
-    var pics = {'food': '<img class = "emoji" src= "../images/food.png"/>',
-            'clothing': '<img class = "emoji" src = "../images/clothes.png"/>',
-            'furniture': '<img class = "emoji" src = "../images/home.png"/>',
-            'transportation': '<img class = "emoji" src = "../images/transportation.png"/>',
-            'health': '<img class = "emoji" src = "../images/health.png"/>',
-            'leisure': '<img class = "emoji" src = "../images/leisure.png"/>',
-            'other': '<img class = "emoji" src = "../images/think.png"/>'}
-
-    $(function ()
-    {
-        $('#update').on('click', function ()
-        {
-            for(var key in props){
-                for (i=0; i<props[key]; i++){
-                    var key2 = ('#').concat(key);
-                    $(key2).prepend(pics[key]);
-                }
-            }
-        });
-
-    });
-
-
 });
+
+
+
 
 
 function gotData(data){
@@ -88,5 +69,3 @@ function errData(err) {
     console.log('Error!');
     console.log(err)
 }
-
-
