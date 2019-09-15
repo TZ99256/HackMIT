@@ -82,7 +82,7 @@
                 for (line in data.regions[region].lines){
                     
                     for(word in data.regions[region].lines[line].words){
-                        if (!hasNumber(data.regions[region].lines[line].words[word].text)){
+                        if (!hasNumber(data.regions[region].lines[line].words[word].text) && !data.regions[region].lines[line].words[word].text.includes(",") && !data.regions[region].lines[line].words[word].text.includes("Price") && data.regions[region].lines[line].words[word].text !== ""){
                             temp_line += data.regions[region].lines[line].words[word].text
                         }
                         
