@@ -175,15 +175,14 @@ firebase.database().ref('Items').once('value').then(function(snapshot) {
 
     $(function ()
     {
-        $('#update').on('click', function ()
-        {
-            for(var key in props){
-                for (i=0; i<props[key]; i++){
-                    var key2 = ('#').concat(key);
-                    $(key2).prepend(pics[key]);
-                }
+
+        for(var key in props){
+            for (i=0; i<props[key]; i++){
+                var key2 = ('#').concat(key);
+                $(key2).prepend(pics[key]);
             }
-        });
+        }
+    
 
     });
     
