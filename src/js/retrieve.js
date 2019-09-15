@@ -14,7 +14,11 @@ var database = firebase.database();
 var retrieve = database.ref('Items');
 
 var result = retrieve.on('value',gotData,errData);
+var preOb = document.getElementById('object');
 
+database.ref().child("Items").on('value',snap =>{
+    preOb.innerText =JSON.stringify(snap.val(),null,3)
+});
 function gotData(data){
     console.log(data.val()); //this is where the data is
     var x = data.val()
