@@ -14,11 +14,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="scanreceipt.html">Scan Receipt</a>
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="scanreceipt.html">Scan Receipt<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="myspending.html">My Spending</a>
@@ -119,13 +119,13 @@
         <button onclick="processImage()">Read image</button>
         <br><br>
         <div id="wrapper" style="width:1020px; display:table;">
-            <div id="jsonOutput" style="width:600px; display:table-cell;">
+            <div id="jsonOutput" style="width:600px; display:table-cell; padding-left: 100px;">
                 Are these your items?:
                 <br><br>
                 <textarea id="responseTextArea" class="UIInput"
                           style="width:580px; height:400px;"></textarea>
             </div>
-            <div id="imageDiv" style="width:420px; display:table-cell;">
+            <div id="imageDiv" style="width:420px; display:table-cell; padding-left: 100px;">
                 Source image:
                 <br><br>
                 <img id="sourceImage" width="400" />
