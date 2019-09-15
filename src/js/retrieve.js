@@ -24,6 +24,7 @@ var result = retrieve.on('value',gotData,errData);
 firebase.database().ref('Items').once('value').then(function(snapshot) {
     var props = {'food': 0.0, 'clothing': 0.0, 'furniture': 0.0, 'transportation': 0.0, 'health': 0.0, 'leisure': 0.0, 'other': 0.0};
     var total = 0.0;
+    var cal = [];
     snapshot.forEach(function(userSnapshot) {
         var things = []
         var username = userSnapshot.val();
@@ -34,7 +35,7 @@ firebase.database().ref('Items').once('value').then(function(snapshot) {
             price: username.price,
             message: username.message,
         });
-        var preOb = document.getElementById('object');
+        /*var preOb = document.getElementById('object');
         if (preOb!=null){
             for (var key in things){
                 var box = document.createElement('div');
@@ -44,7 +45,9 @@ firebase.database().ref('Items').once('value').then(function(snapshot) {
                 box.textContent = things[key].date
                 preOb.appendChild(box)
             }
-        }
+        }*/
+
+        cal.push([things[0].date, things[0].category]);
 
         props[things[0]["category"]] += parseFloat(things[0]['price']);
         total += parseFloat(things[0]['price']);
@@ -75,6 +78,20 @@ firebase.database().ref('Items').once('value').then(function(snapshot) {
         });
 
     });
+    
+    cal.sort();
+    console.log(cal);
+    var preOb = document.getElementById('object');
+    if (preOb!=null){
+        for (i=0;i<cal.length; i++){
+            var box = document.createElement('div');
+            box.innerText = cal[i][0]
+            preOb.appendChild(box)
+            var box = document.createElement('div');
+            box.textContent = cal[i][1]
+            preOb.appendChild(box)
+        }
+    }
 
 
 });
