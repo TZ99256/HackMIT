@@ -21,7 +21,8 @@ $('#contactForm').submit(function(e) {
         item: $('.item').val(),
         price: $('.price').val(),
         date: $('.date').val(),
-        message: $('.message').val()
+        message: $('.message').val(),
+        category: $('.category').val()
     });
  
     $('.success-message').show();
