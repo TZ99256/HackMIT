@@ -14,7 +14,7 @@ var database = firebase.database();
 var retrieve = database.ref('Items');
 
 var result = retrieve.on('value',gotData,errData);
-var preOb = document.getElementById('object');
+
 
 // database.ref().child("Items").on('value',snap =>{
 //     preOb.innerText =JSON.stringify(snap.val(),null,3)
@@ -25,11 +25,24 @@ firebase.database().ref('Items').once('value').then(function(snapshot) {
     snapshot.forEach(function(userSnapshot) {
         var username = userSnapshot.val();
         things.push({
+            date:username.date,
+            category: username.category,
             key:   username.item,
-            value: username.price
+            value: username.price,
+            message: username.message,
+            
         });
     });
 });
+
+
+  
+var preOb = document.getElementById('object');
+for (var key in things){
+    var box = document.createElement('div');
+    box.innerText = things[key]
+    preOb.appendChild(box)
+}
 console.log(things)
 
 function gotData(data){

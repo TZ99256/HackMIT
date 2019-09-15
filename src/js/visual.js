@@ -1,6 +1,7 @@
 var data = {1: {'ID': '#food', 'Purchase Category': 'Dining', 'Price': 12.05},
             2: {'ID': '#food', 'Purchase Category': 'Dining', 'Price': 3.12},
-            3: {'ID': '#transportation', 'Purchase Category': 'Transportation', 'Price': 4.1}};
+            3: {'ID': '#transportation', 'Purchase Category': 'Transportation', 'Price': 4.1},
+            4: {'ID': '#clothing', 'Purchase Category': 'Clothing', 'Price': 20}};
 
 var props = {'#food': 0, '#clothing': 0, '#furniture': 0, '#transportation': 0, '#health': 0, '#other': 0};
 var total = 0;
