@@ -12,13 +12,7 @@ if (!firebase.apps.length) {
 }
 var database = firebase.database();
 var retrieve = database.ref('Items');
-/*
-starCountRef.on('value', function(snapshot) {
-    updateStarCount(postElement, snapshot.val());
-  });
-snapshot.val()
 
-*/
 var result = retrieve.on('value',gotData,errData);
 
 function gotData(data){
